@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Suggestion Form</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="suggestion.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <i class="fas fa-tools"></i>
+      <span>Student Maintenance Portal</span>
+    </div>
+    <a href="index.html" class="btn btn-outline">
+      <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+  </header>
+  
+  <main class="main-content">
+    <div class="form-container">
+      <div class="form-header">
+        <h1>Suggestion Form</h1>
+        <p>Share your ideas to improve our campus facilities and services</p>
+      </div>
+      
+      <form id="suggestionForm" class="form-grid">
+        <!-- Student Information -->
+        <div class="form-group">
+          <label for="regNo" class="required">Registration Number</label>
+          <input type="text" id="regNo" name="regNo" required placeholder="Enter your student ID">
+        </div>
+        
+        <div class="form-group">
+          <label for="studentName" class="required">Full Name</label>
+          <input type="text" id="studentName" name="studentName" required placeholder="Your full name">
+        </div>
+        
+        <div class="form-group">
+          <label for="block" class="required">Block</label>
+          <input type="text" id="block" name="block" required placeholder="e.g., Block A">
+        </div>
+        
+        <div class="form-group">
+          <label for="roomNo" class="required">Room Number</label>
+          <input type="text" id="roomNo" name="roomNo" required placeholder="e.g., Room 205">
+        </div>
+        
+        <!-- Suggestion Details -->
+        <div class="form-group full-width">
+          <label for="improvementType" class="required">Area of Improvement</label>
+          <select id="improvementType" name="improvementType" required>
+            <option value="">Select area</option>
+            <option value="electrical">Electrical</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="cleaning">Cleaning</option>
+            <option value="internet">Internet</option>
+            <option value="laundry">Laundry</option>
+            <option value="furniture">Furniture</option>
+            <option value="security">Security</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group full-width">
+          <label for="suggestion" class="required">Your Suggestion</label>
+          <textarea id="suggestion" name="suggestion" required placeholder="Please describe your improvement suggestion in detail..."></textarea>
+        </div>
+        
+        <!-- Form Actions -->
+        <div class="form-actions">
+          <button type="reset" class="btn btn-secondary">
+            <i class="fas fa-undo"></i> Reset Form
+          </button>
+          <button type="submit" class="btn btn-card">
+            <i class="fas fa-paper-plane"></i> Submit Suggestion
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© <span id="current-year"></span> University Maintenance System</p>
+      <div class="footer-links">
+        <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+        <a href="#"><i class="fas fa-phone"></i> Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="suggestion.js"></script>
+</body>
+</html>
