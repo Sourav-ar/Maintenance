@@ -1,15 +1,15 @@
 <?php
-// 1. Enable error reporting
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// 2. Database config
+
 $db_host = "127.0.0.1:3307";
 $db_user = "root";
 $db_pass = "";
 $db_name = "student_maintenance";
 
-// 3. Connect to database
+
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 if ($conn->connect_error) {
     die("<div style='color:red;padding:20px;font-family:Arial;'>
@@ -19,7 +19,7 @@ if ($conn->connect_error) {
     </div>");
 }
 
-// 4. Process form submission
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
     $regNo = $conn->real_escape_string($_POST['regNo']);
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $improvementType = $conn->real_escape_string($_POST['improvementType']);
     $suggestion = $conn->real_escape_string($_POST['suggestion']);
 
-    // 5. Insert into database
+   
     $sql = "INSERT INTO suggestions (regNo, studentName, block, roomNo, improvementType, suggestion)
             VALUES ('$regNo', '$studentName', '$block', '$roomNo', '$improvementType', '$suggestion')";
 
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
     
-    // Close connection
+   
     $conn->close();
 }
 ?>
