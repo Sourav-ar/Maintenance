@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student Maintenance Portal</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <i class="fas fa-tools"></i>
+      <span>Student Maintenance Portal</span>
+    </div>
+    <div class="header-actions">
+      <a href="report.html" class="btn btn-outline">Report</a>
+    </div>
+  </header>
+  
+  <main class="main-content">
+    <div class="hero">
+      <h1>Campus Maintenance Services</h1>
+      <p class="subtitle">Quick and efficient solutions for all your campus facility needs</p>
+    </div>
+    
+    <div class="services-grid">
+      <!-- Maintenance Card -->
+      <div class="service-card card-maintenance">
+        <div class="card-icon">
+          <i class="fas fa-wrench"></i>
+        </div>
+        <h3>Maintenance Requisition</h3>
+        <p>Report urgent issues in your dormitory or campus facilities that need immediate attention.</p>
+        <a href="requisition.html" class="btn btn-card">
+          Submit Request
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <div class="card-wave"></div>
+      </div>
+      
+      <!-- Suggestion Card -->
+      <div class="service-card card-suggestion">
+        <div class="card-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3>Suggestions & Improvements</h3>
+        <p>Share your innovative ideas to enhance our campus facilities and services.</p>
+        <a href="suggestion.html" class="btn btn-card">
+          Make Suggestion
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <div class="card-wave"></div>
+      </div>
+      
+      <!-- Feedback Card -->
+      <div class="service-card card-feedback">
+        <div class="card-icon">
+          <i class="fas fa-comment-alt"></i>
+        </div>
+        <h3>Feedback</h3>
+        <p>Help us improve by sharing your experience with our maintenance services.</p>
+        <a href="feedback.html" class="btn btn-card">
+          Give Feedback
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <div class="card-wave"></div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© <span id="current-year"></span> University Maintenance System</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
